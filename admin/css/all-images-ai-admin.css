@@ -1,0 +1,436 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#allimages-page-settings .form-table tr {
+}
+#allimages-page-settings .form-table th {
+    width: 300px;
+    vertical-align: inherit;
+    padding: 10px 10px 10px 0;
+}
+
+#allimages-page-settings .form-table td {
+    padding: 10px;
+}
+
+.allimages-form label {
+    display:block;
+    font-weight: 500;
+    padding-bottom:5px;
+    font-size:13px;
+    max-width: 110px;
+    white-space: nowrap;
+}
+.allimages-form select {
+    display:block;
+    width: 100%;
+    margin-bottom:15px;
+}
+.number-of-posts {
+    margin-bottom: 0;
+    margin-left:10px;
+    font-size:14px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+}
+.small-loader {
+    width:24px;
+    margin:10px;
+}
+#adminmenu .toplevel_page_all-images-ai .wp-menu-image img { 
+    height: 16px;
+}
+.all-images-wrap {
+    padding:20px;
+    position: relative;
+}
+.title-wrapper h1 {
+    display: inline-block;
+}
+.title-wrapper h1 + a {
+    display: inline-block;
+    float: right;
+    margin-top: 1rem;
+}
+.title-wrapper .notice-error + a {
+    display: none;
+}
+#all-images-image-results {
+    padding:20px 0 20px 0;
+}
+.all-images-results-grid {
+    font-family: 'Poppins', sans-serif;
+}
+.all-images-results-grid .error {
+    background-color: #fff0f0;
+    color: red;
+    border: 1px solid #d34444;
+    margin: 0;
+    padding: 15px;
+    display: inline-block;
+}
+.all-images-image-wrapper {
+    border-radius:5px;
+    /*overflow: hidden;*/
+    margin:5px;
+    position:relative;
+    width: 250px;
+}
+.all-images-image-wrapper img {
+    display: block;
+    object-fit: cover;
+    max-width:100%;
+    width:100%;
+}
+.all-images-image-wrapper .image-overlay {
+    position: absolute;
+    background:rgba(0,0,0,0.55);
+    width: 100%;
+    height: 100%;
+    display:none;
+    cursor:pointer;
+    text-align: center;
+    z-index: 5;
+}
+.all-images-image-wrapper.blurred .image-overlay {
+    cursor: not-allowed;
+}
+.all-images-image-wrapper.blurred img {
+    filter:blur(0.15rem);
+}
+.all-images-image-wrapper .image-overlay.pinned-overlay {
+    display:block;
+}
+.all-images-image-wrapper .image-overlay.in-progress {
+    display:none !important;
+}
+.all-images-image-wrapper .image-overlay .loader-gif,
+.all-images-image-wrapper .dashicons {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left:50%;
+    margin-left:-13px;
+    top: 50%;
+    margin-top: -13px;
+}
+.all-images-image-wrapper .dashicons {
+    color:#FFF;
+    z-index: 50;
+    font-size: 26px;
+    line-height: 1em;
+    cursor: default;
+}
+.all-images-image-wrapper:hover .image-overlay {
+    display:block;
+}
+.all-images-image-wrapper .image-overlay a {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.4em;
+    transition: all 0.3s;
+}
+.all-images-image-wrapper:hover .image-overlay a:hover {
+    font-size: 1.5em;
+}
+table .all-images-image-wrapper .image-overlay .dashicons.dashicons-yes,
+.all-images-image-wrapper .image-overlay.pinned-overlay.chosen a {
+    display:none;
+}
+.all-images-image-wrapper .image-overlay.pinned-overlay.chosen .dashicons.dashicons-yes {
+    display:block;
+}
+.all-images-image-wrapper .pill {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: #3830A3;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 0.85em;
+}
+.provider-pexels .pill {
+    background-color:#07a081;
+}
+.provider-pixabay .pill {
+    background-color:#00AB6B;
+}
+.provider-unsplash .pill {
+    background-color:#000;
+}
+.all-images-image-wrapper .copyright {
+    color: #FFF;
+    position: absolute;
+    right: 7px;
+    bottom: 5px;
+    line-height: 1em;
+    font-size: 14px;
+}
+.all-images-image-wrapper.copyright-pay .copyright {
+    color: gold;
+}
+.all-images-image-wrapper a.settings {
+    position: absolute;
+    top:5px;
+    right:1px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    text-decoration: none;
+    z-index: 50;
+}
+.all-images-image-wrapper a.settings .dashicons {
+    font-size: 18px;
+    color:#ccc;
+    cursor:pointer;
+}
+.all-images-image-wrapper a.settings:hover .dashicons {
+    color:#fff;
+}
+.all-images-image-wrapper a.settings.not-allowed .dashicons {
+    cursor: not-allowed;
+}
+.all-images-image-wrapper a.settings.not-allowed:hover .dashicons {
+    color:#ccc;
+}
+.page-load-status {
+    display: none; /* hidden by default */
+    text-align: center;
+    color: #3830A3;
+}
+.required-field:after {
+    content:'*';
+    color:#EF4444;
+}
+label.error,
+p.error {
+    color:#EF4444;
+}
+.allimages-image-row {
+    border-bottom:1px solid #888;
+}
+#allimages-page-bulk-form .button-primary {
+    margin-top:10px;
+}
+#bulk-form-result {
+    margin: 5px 0;
+    max-width: 350px;
+}
+.button.button-primary .dashicons {
+    vertical-align: middle;
+}
+.active-text {
+    float: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.hint-text {
+    font-weight: normal;
+    display: block;
+    font-size:12px;
+    color:#666;
+    margin-top:10px
+}
+.hint-text .dashicons {
+    vertical-align:middle;
+    font-size: 18px;
+}
+.strikethrough {
+    text-decoration: line-through;
+}
+#collapse-accordions {
+    margin-bottom:15px;
+}
+.button-delete {
+    background-color: #EF4444;
+    border-radius: 0.25rem;
+    color:#FFF !important;
+    padding: 0.25rem 0.625rem;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight:600;
+    margin-top:10px;
+    display:inline-block;
+    margin-top:5px;
+    cursor: pointer;
+}
+.button-delete:hover {
+    background-color: rgb(193 55 55);
+    color:#FFF;
+}
+#generations-list td {
+    vertical-align: middle;
+}
+.all-images-image-wrapper.small-image {
+    display:inline-block;
+    width: auto;
+    margin:4px;
+}
+.all-images-image-wrapper.small-image .image-overlay a {
+    font-size:1.1em;
+    top:42%;
+    outline: 0 none;
+    box-shadow:none;
+}
+.all-images-image-wrapper.small-image:hover .image-overlay a {
+    font-size:1.2em;
+}
+.all-images-image-wrapper.small-image img {
+    width:105px;
+}
+.generation-row .all-images-image-wrapper {
+    min-height:128.25px;
+}
+.gen-pending {
+    color:#3830A3;
+}
+.gen-complete {
+    color:#0e7b17;
+}
+.gen-failed {
+    color:#9e1313;
+}
+.no-margin {
+    margin: 0;
+}
+.back-to-form {
+    margin-left:10px !important;
+}
+
+.accordion-title {
+    font-family: 'Poppins', sans-serif;
+    line-height:2em;
+    font-size:1rem !important;
+}
+.ui-accordion-header-active {
+    background-color: #3830A3 !important;
+    color:#FFF !important;
+}
+.accordion-title .ui-icon {
+    color:#FFF;
+}
+.modal-form label span {
+    display:block;
+    margin:5px 0;
+}
+.modal-form label input {
+    width:100%;
+    margin-bottom: 10px;
+}
+.ai-shadow:before {
+    content:'';
+    display:block;
+    position: absolute;
+    top:-5px;
+    right:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background-color:rgba(0,0,0,0.75);
+    z-index: 10000;
+}
+.ai-modal-window {
+    display:none;
+    position: absolute;
+    background: white;
+    left: 50%;
+    top: 0;
+    width: 250px;
+    z-index: 10001;
+    margin-left: -140px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+a.button-close {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    text-decoration: none;
+    width: 26px;
+    height: 26px;
+    z-index: 10002;
+}
+a.button-close i.dashicons {
+    color: #333;
+    cursor: pointer;
+}
+.ai-modal-window.open {
+    display: block;
+}
+
+/* LOADER */
+.loader-ellips {
+    font-size: 20px; /* change size here */
+    position: relative;
+    width: 4em;
+    height: 1em;
+    margin: 10px auto;
+}
+
+.loader-ellips__dot {
+    display: block;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.5em;
+    background: #3830A3; /* change color here */
+    position: absolute;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+    left: 0;
+}
+.loader-ellips__dot:nth-child(3) { left: 1.5em; }
+.loader-ellips__dot:nth-child(4) { left: 3em; }
+
+@keyframes reveal {
+    from { transform: scale(0.001); }
+    to { transform: scale(1); }
+}
+
+@keyframes slide {
+    to { transform: translateX(1.5em) }
+}
+
+.loader-ellips__dot:nth-child(1) {
+    animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+    animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(4) {
+    animation-name: reveal;
+    animation-direction: reverse;
+}
+
+.wp-dialog.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.wp-dialog .ui-progressbar {
+    position: relative;
+}
+
+.wp-dialog .progress-label {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+}
